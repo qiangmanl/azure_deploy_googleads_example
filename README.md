@@ -31,3 +31,8 @@ az webapp up -n $AZURE_WEB_APP --runtime 'PYTHON:3.9' --sku FREE --logs
 #debug
 
 https://popupwebapp-acf7735b.scm.azurewebsites.net/DebugConsole
+
+#list all server platform
+az webapp list-runtimes
+
+
