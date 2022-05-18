@@ -11,7 +11,6 @@ $az webapp up --name {webappname} --html
 
 #azure deploy
 
-export RESOURCE_GROUP=learn-acf7735b-8fcb-4ae5-91d3-4383f0dcb68e
 
 export AZURE_REGION=centralus
 
