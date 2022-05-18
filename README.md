@@ -21,4 +21,11 @@ export AZURE_WEB_APP=popupwebapp-acf7735b
 
 az appservice plan create --name $AZURE_APP_PLAN --resource-group $RESOURCE_GROUP --location $AZURE_REGION --sku FREE  --is-linux 
 
-az webapp create --name $AZURE_WEB_APP --resource-group $RESOURCE_GROUP --plan $AZURE_APP_PLAN
+az webapp create --name $AZURE_WEB_APP --resource-group $RESOURCE_GROUP --plan $AZURE_APP_PLAN --runtime "PYTHON:3.9"
+
+git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
+  
+cd msdocs-python-flask-webapp-quickstart
+
+az webapp up -n $AZURE_WEB_APP --runtime 'PYTHON:3.9' --sku FREE --logs
+
