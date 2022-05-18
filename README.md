@@ -35,4 +35,6 @@ https://popupwebapp-acf7735b.scm.azurewebsites.net/DebugConsole
 #list all server platform
 az webapp list-runtimes
 
+az group delete --name $AZURE_WEB_APP --no-wait
+
 
