@@ -22,13 +22,18 @@ az appservice plan create --name $AZURE_APP_PLAN --resource-group $RESOURCE_GROU
 
 az webapp create --name $AZURE_WEB_APP --resource-group $RESOURCE_GROUP --plan $AZURE_APP_PLAN --runtime "PYTHON:3.9"
 
-git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
+#git remote resp
+az webapp deployment source config-local-git --name $AZURE_WEB_APP --resource-group $RESOURCE_GROUP
+
+#
+az webapp config set -g  $RESOURCE_GROUP -n $AZURE_WEB_APP
+
+
+git clone https://github.com/qiangmanl/azure_deploy_googleads_example
   
-cd msdocs-python-flask-webapp-quickstart
+cd azure_deploy_googleads_example
 
 az webapp up -n $AZURE_WEB_APP --runtime 'PYTHON:3.9' --sku FREE --logs
-
-#debug
 
 https://popupwebapp-acf7735b.scm.azurewebsites.net/DebugConsole
 
@@ -36,10 +41,4 @@ https://popupwebapp-acf7735b.scm.azurewebsites.net/DebugConsole
 az webapp list-runtimes
 
 az group delete --name $AZURE_WEB_APP --no-wait
-
-#git remote resp
-az webapp deployment source config-local-git --name $AZURE_WEB_APP --resource-group $RESOURCE_GROUP
-
-#
-az webapp config set -g  $RESOURCE_GROUP -n $AZURE_WEB_APP
 
