@@ -33,7 +33,7 @@ git clone https://github.com/qiangmanl/azure_deploy_googleads_example
   
 cd azure_deploy_googleads_example
 
-az webapp up -n $AZURE_WEB_APP --runtime 'PYTHON:3.9' --sku FREE --logs
+az webapp up -n $AZURE_WEB_APP --runtime 'PYTHON:3.7' --sku FREE --logs
 
 https://popupwebapp-acf7735b.scm.azurewebsites.net/DebugConsole
 
