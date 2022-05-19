@@ -1,12 +1,12 @@
 # try:
-from sanic import Sanic
-from sanic.response import json
+    from sanic import Sanic
+    from sanic.response import json
 
-# except ModuleNotFoundError:
-#     import os
-#     os.system("pip install -r requirements.txt")
-#     from sanic import Sanic
-#     from sanic.response import json
+except ModuleNotFoundError:
+    import os
+    os.system("pip install -r requirements.txt")
+    from sanic import Sanic
+    from sanic.response import json
 
 app = Sanic("MyHelloworldapp")
 
