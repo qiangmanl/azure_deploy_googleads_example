@@ -37,4 +37,9 @@ az webapp list-runtimes
 
 az group delete --name $AZURE_WEB_APP --no-wait
 
+#git remote resp
+az webapp deployment source config-local-git --name $AZURE_WEB_APP --resource-group $RESOURCE_GROUP
+
+#
+az webapp config set -g  $RESOURCE_GROUP -n $AZURE_WEB_APP
 
