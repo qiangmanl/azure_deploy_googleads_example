@@ -4,8 +4,6 @@ try:
 
 except ModuleNotFoundError:
     import os
-    import pdb
-    pdb.set_trace()
     os.system("pip install -r requirements.txt")
     from sanic import Sanic
     from sanic.response import json
