@@ -1,9 +1,4 @@
 try:
-
-
-    import pdb
-    pdb.set_trace()#import os
-    #os.system("pip install sanic")
     from sanic import Sanic
     from sanic.response import json
 
@@ -12,8 +7,8 @@ except ModuleNotFoundError:
     import pdb
     pdb.set_trace()
     os.system("pip install -r requirements.txt")
-from sanic import Sanic
-from sanic.response import json
+    from sanic import Sanic
+    from sanic.response import json
 
 app = Sanic("MyHelloworldapp")
 
